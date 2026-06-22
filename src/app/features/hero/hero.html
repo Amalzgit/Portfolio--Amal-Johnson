@@ -1,0 +1,130 @@
+<section class="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden">
+  
+  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+    
+    <!-- Left Column: Text & CTAs -->
+    <div class="flex flex-col space-y-8 animate-float" style="animation-duration: 8s;">
+      
+      <!-- Greeting Tag -->
+      <div class="inline-flex items-center space-x-2 bg-surfaceBorder/20 backdrop-blur-sm border border-surfaceBorder px-4 py-2 rounded-full w-max">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-xs sm:text-sm font-medium tracking-wide text-slate-300">Available for new opportunities</span>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="space-y-4">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+          Hi, I'm <br class="hidden sm:block" />
+          <span class="text-gradient">Amal Johnson</span>
+        </h1>
+        <h2 class="text-xl sm:text-2xl font-medium text-slate-400">
+          Software Developer
+        </h2>
+      </div>
+
+      <!-- Short Intro -->
+      <p class="text-base sm:text-lg text-slate-400 max-w-lg leading-relaxed">
+        I build high-performance, scalable web applications with a focus on modern architecture. Proficient in Angular, React, Node.js, MongoDB, Excel, TypeScript, JavaScript, Git, GitHub, and AWS.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 pt-4">
+        <a href="#projects" class="group relative inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 bg-primary rounded-xl overflow-hidden shadow-lg shadow-primary/30 hover:scale-105 hover:shadow-primary/50">
+          <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+          <span class="relative flex items-center gap-2">
+            View Projects
+            <ng-icon name="lucideChevronRight" size="18" class="group-hover:translate-x-1 transition-transform"></ng-icon>
+          </span>
+        </a>
+        
+        <a href="/resume%20model_1.pdf" download="Amal_Johnson_Resume.pdf" class="group relative inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-slate-300 transition-all duration-200 bg-surface border border-surfaceBorder rounded-xl hover:text-white hover:border-slate-500 hover:bg-slate-800/50 hover:scale-105">
+          <span class="relative flex items-center gap-2">
+            <ng-icon name="lucideDownload" size="18" class="text-slate-400 group-hover:text-white transition-colors"></ng-icon>
+            Download Resume
+          </span>
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-6 pt-4">
+        <a href="https://linkedin.com/in/amaljohnson" target="_blank" class="text-slate-400 hover:text-[#0a66c2] transition-colors hover:-translate-y-1 transform duration-200" aria-label="LinkedIn">
+          <ng-icon name="lucideLinkedin" size="24"></ng-icon>
+        </a>
+        <a href="https://github.com/amaljohnson" target="_blank" class="text-slate-400 hover:text-white transition-colors hover:-translate-y-1 transform duration-200" aria-label="GitHub">
+          <ng-icon name="lucideGithub" size="24"></ng-icon>
+        </a>
+        <a href="mailto:1mailtoamal@gmail.com" class="text-slate-400 hover:text-red-400 transition-colors hover:-translate-y-1 transform duration-200" aria-label="Email">
+          <ng-icon name="lucideMail" size="24"></ng-icon>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Tech Cloud Visual -->
+    <div class="hidden lg:flex justify-center items-center relative h-full min-h-[400px]">
+      <div class="relative w-full h-full max-w-lg mx-auto">
+        <!-- Floating Glow -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-50 animate-pulse" style="animation-duration: 6s;"></div>
+        
+        <!-- Tech Stack Floating Pills -->
+        <div class="absolute top-10 left-10 animate-float" style="animation-delay: 0s; animation-duration: 5s;">
+          <span class="px-5 py-3 glass-card font-bold text-red-500 shadow-lg shadow-red-500/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-red-500"></div>Angular</span>
+        </div>
+        
+        <div class="absolute top-20 right-10 animate-float" style="animation-delay: 1.5s; animation-duration: 6s;">
+          <span class="px-5 py-3 glass-card font-bold text-cyan-400 shadow-lg shadow-cyan-400/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-cyan-400"></div>React</span>
+        </div>
+        
+        <div class="absolute top-1/2 -left-4 -translate-y-1/2 animate-float" style="animation-delay: 0.5s; animation-duration: 7s;">
+          <span class="px-5 py-3 glass-card font-bold text-green-500 shadow-lg shadow-green-500/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-green-500"></div>Node.js</span>
+        </div>
+        
+        <div class="absolute top-1/3 left-1/3 animate-float" style="animation-delay: 2.5s; animation-duration: 5.5s;">
+          <span class="px-5 py-3 glass-card font-bold text-blue-400 shadow-lg shadow-blue-400/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-blue-400"></div>TypeScript</span>
+        </div>
+
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 animate-float" style="animation-delay: 3s; animation-duration: 4.5s;">
+          <span class="px-5 py-3 glass-card font-bold text-yellow-400 shadow-lg shadow-yellow-400/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-yellow-400"></div>JavaScript</span>
+        </div>
+
+        <div class="absolute bottom-20 left-20 animate-float" style="animation-delay: 1s; animation-duration: 6.5s;">
+          <span class="px-5 py-3 glass-card font-bold text-green-400 shadow-lg shadow-green-400/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-green-400"></div>MongoDB</span>
+        </div>
+
+        <div class="absolute bottom-10 right-20 animate-float" style="animation-delay: 2s; animation-duration: 5s;">
+          <span class="px-5 py-3 glass-card font-bold text-orange-400 shadow-lg shadow-orange-400/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-orange-400"></div>AWS</span>
+        </div>
+
+        <div class="absolute bottom-1/3 right-1/4 animate-float" style="animation-delay: 3.5s; animation-duration: 6s;">
+          <span class="px-5 py-3 glass-card font-bold text-slate-200 shadow-lg shadow-slate-200/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-slate-200"></div>Git & GitHub</span>
+        </div>
+
+        <div class="absolute top-2/3 left-1/4 animate-float" style="animation-delay: 4s; animation-duration: 7.5s;">
+          <span class="px-5 py-3 glass-card font-bold text-green-600 shadow-lg shadow-green-600/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-green-600"></div>Excel</span>
+        </div>
+
+        <!-- NEW PILLS -->
+        <div class="absolute top-1/4 right-1/4 animate-float" style="animation-delay: 2.2s; animation-duration: 5.2s;">
+          <span class="px-4 py-2 glass-card font-bold text-blue-500 shadow-lg shadow-blue-500/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-blue-500"></div>PostgreSQL</span>
+        </div>
+
+        <div class="absolute bottom-1/4 left-1/3 animate-float" style="animation-delay: 1.8s; animation-duration: 6.8s;">
+          <span class="px-4 py-2 glass-card font-bold text-orange-500 shadow-lg shadow-orange-500/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-orange-500"></div>HTML & CSS</span>
+        </div>
+
+        <div class="absolute top-1/2 left-1/4 animate-float" style="animation-delay: 3.2s; animation-duration: 5.8s;">
+          <span class="px-4 py-2 glass-card font-bold text-purple-500 shadow-lg shadow-purple-500/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-purple-500"></div>Bootstrap</span>
+        </div>
+
+        <div class="absolute top-3/4 right-1/3 animate-float" style="animation-delay: 0.7s; animation-duration: 6.2s;">
+          <span class="px-4 py-2 glass-card font-bold text-red-400 shadow-lg shadow-red-400/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-red-400"></div>Java</span>
+        </div>
+
+        <div class="absolute bottom-5 left-1/2 animate-float" style="animation-delay: 4.5s; animation-duration: 5.5s;">
+          <span class="px-4 py-2 glass-card font-bold text-blue-600 shadow-lg shadow-blue-600/20 flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-blue-600"></div>C++</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

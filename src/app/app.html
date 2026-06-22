@@ -1,0 +1,31 @@
+<div class="relative bg-background min-h-screen text-slate-200 font-sans selection:bg-primary selection:text-white">
+  <!-- Dynamic Particle/Animated Background (CSS Based for now) -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/10 blur-[120px]"></div>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+    
+    <!-- Floating Navigation Header -->
+    <app-header class="sticky top-0 z-50 transition-all duration-300"></app-header>
+    
+    <!-- Router Outlet for potential multi-page or lazy-loaded routes -->
+    <router-outlet></router-outlet>
+    
+    <!-- Portfolio Sections Stacked for Single Page Scroll -->
+    <main class="flex-grow flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 py-20">
+      <app-hero id="hero"></app-hero>
+      <app-about id="about"></app-about>
+      <app-skills id="skills"></app-skills>
+      <app-experience id="experience"></app-experience>
+      <app-projects id="projects"></app-projects>
+      <app-case-studies id="case-studies"></app-case-studies>
+      <app-contact id="contact"></app-contact>
+    </main>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+  </div>
+</div>

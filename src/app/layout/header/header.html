@@ -1,0 +1,48 @@
+<header 
+  class="fixed w-full top-0 left-0 z-50 transition-all duration-300 border-b"
+  [ngClass]="isScrolled() ? 'bg-surface/90 backdrop-blur-md border-surfaceBorder shadow-lg py-3' : 'bg-transparent border-transparent py-5'">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
+        Amal<span class="text-primary">.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+        <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a>
+        <a href="#experience" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a>
+        <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-white transition-all duration-300 text-sm font-semibold">
+          Hire Me
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" 
+        (click)="toggleMenu()"
+        aria-label="Toggle menu">
+        <ng-icon [name]="isMenuOpen() ? 'lucideX' : 'lucideMenu'" size="24"></ng-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Dropdown -->
+  <div 
+    class="md:hidden absolute w-full bg-surface border-b border-surfaceBorder backdrop-blur-xl transition-all duration-300 overflow-hidden"
+    [ngClass]="isMenuOpen() ? 'max-h-[400px] opacity-100 py-4 shadow-xl' : 'max-h-0 opacity-0 py-0'">
+    <div class="flex flex-col space-y-4 px-6">
+      <a href="#about" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">About</a>
+      <a href="#skills" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">Skills</a>
+      <a href="#experience" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">Experience</a>
+      <a href="#projects" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">Projects</a>
+      <a href="#contact" (click)="toggleMenu()" class="w-full text-center px-5 py-3 rounded-xl bg-primary text-white font-semibold mt-4 shadow-lg shadow-primary/20">
+        Hire Me
+      </a>
+    </div>
+  </div>
+</header>

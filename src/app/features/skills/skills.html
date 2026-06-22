@@ -1,0 +1,28 @@
+<section class="py-20 relative">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center space-x-4 mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Technical Arsenal</h2>
+      <div class="h-px bg-surfaceBorder flex-grow max-w-xs"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let skill of skills" class="glass-card p-6 group">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg font-semibold text-white group-hover:text-primary transition-colors">{{ skill.name }}</h3>
+          <span class="text-xs font-mono px-2 py-1 bg-surfaceBorder/30 rounded text-slate-400">{{ skill.category }}</span>
+        </div>
+        
+        <!-- Animated Progress Bar -->
+        <div class="w-full bg-surfaceBorder/50 rounded-full h-2 overflow-hidden">
+          <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full transition-all duration-1000 ease-out"
+               [style.width]="skill.level + '%'">
+          </div>
+        </div>
+        
+        <div class="flex justify-end mt-2">
+          <span class="text-xs font-medium text-slate-500">{{ skill.level }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
