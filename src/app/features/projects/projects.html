@@ -1,65 +1,64 @@
 <section class="py-12 relative">
   <div class="max-w-7xl mx-auto">
     
-    <!-- Section Header -->
+    <!-- Section Header Tag -->
     <div class="flex items-center gap-4 mb-12">
-      <div class="bg-[#f43f5e] text-white font-space font-extrabold text-sm uppercase px-4 py-1.5 border-3 border-black shadow-[4px_4px_0px_#000] transform rotate-1">
+      <div class="spatial-pill bg-sky-500/10 border-sky-400/30 text-sky-300 font-outfit font-bold">
         04. FEATURED WORK
       </div>
-      <h2 class="text-3xl sm:text-5xl font-syne font-extrabold text-white tracking-tight">
-        PROJECTS & <span class="text-[#06b6d4]">BUILD LAB</span>
+      <h2 class="text-3xl sm:text-5xl font-outfit font-extrabold text-white tracking-tight">
+        PROJECTS & <span class="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">BUILD LAB</span>
       </h2>
-      <div class="h-1 bg-black flex-grow border-b-2 border-dashed border-[#f43f5e] hidden sm:block"></div>
+      <div class="h-px bg-white/10 flex-grow hidden sm:block"></div>
     </div>
 
-    <!-- Project Cards Grid -->
+    <!-- Spatial Project Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
       <div *ngFor="let project of projects; let idx = index" 
-           class="bg-[#130c21] border-3 border-black p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-x-1.5 hover:-translate-y-1.5 group"
-           [ngClass]="idx % 2 === 0 ? 'shadow-brutal-lime hover:shadow-brutal-pink' : 'shadow-brutal-cyan hover:shadow-brutal-yellow'">
+           class="spatial-glass-card p-6 sm:p-8 flex flex-col justify-between border-white/15 hover:border-sky-400/50 group">
         
         <div>
           <!-- Card Header & Badges -->
           <div class="flex justify-between items-start gap-4 mb-4">
-            <div class="bg-[#a3e635] text-black font-space font-extrabold text-xs px-2.5 py-1 border-2 border-black shadow-[2px_2px_0px_#000]">
+            <div class="spatial-pill bg-white/5 text-sky-400 border-white/15 text-xs font-outfit font-extrabold">
               PROJECT 0{{ idx + 1 }}
             </div>
             
             <div class="flex items-center gap-2">
               @if (project.githubLink) {
                 <a [href]="project.githubLink" target="_blank" 
-                   class="px-3 py-1 bg-[#f43f5e] text-white font-space font-bold text-xs border-2 border-black shadow-[2px_2px_0px_#000] hover:-translate-y-0.5 transition-transform flex items-center gap-1.5">
-                  <ng-icon name="lucideGithub" size="14"></ng-icon>
-                  <span>CODE</span>
+                   class="p-2 rounded-full bg-white/5 border border-white/15 text-slate-300 hover:text-white hover:border-sky-400/50 transition-colors flex items-center gap-1.5"
+                   aria-label="GitHub Repository">
+                  <ng-icon name="lucideGithub" size="16"></ng-icon>
                 </a>
               }
               @if (project.liveLink) {
                 <a [href]="project.liveLink" target="_blank" 
-                   class="px-3 py-1 bg-[#06b6d4] text-black font-space font-bold text-xs border-2 border-black shadow-[2px_2px_0px_#000] hover:-translate-y-0.5 transition-transform flex items-center gap-1.5">
-                  <ng-icon name="lucideExternalLink" size="14"></ng-icon>
-                  <span>DEMO</span>
+                   class="p-2 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 hover:bg-sky-500 hover:text-black transition-all flex items-center gap-1.5"
+                   aria-label="Live Demo">
+                  <ng-icon name="lucideExternalLink" size="16"></ng-icon>
                 </a>
               }
             </div>
           </div>
 
           <!-- Project Title -->
-          <h3 class="text-2xl font-syne font-extrabold text-white group-hover:text-[#a3e635] transition-colors mb-3">
+          <h3 class="text-2xl font-outfit font-extrabold text-white group-hover:text-sky-300 transition-colors mb-3">
             {{ project.title }}
           </h3>
 
           <!-- Description -->
-          <p class="font-space text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+          <p class="font-sans text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
             {{ project.description }}
           </p>
         </div>
 
         <!-- Tech Stack Badges -->
-        <div class="pt-4 border-t-2 border-black flex flex-wrap gap-2">
+        <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2">
           <span *ngFor="let tech of project.techStack" 
-                class="px-2.5 py-0.5 bg-[#1d1233] text-[#a3e635] font-space font-bold text-xs border border-black shadow-[2px_2px_0px_#000]">
-            # {{ tech }}
+                class="spatial-pill py-0.5 text-[11px] font-sans font-medium text-slate-300">
+            {{ tech }}
           </span>
         </div>
 
@@ -69,4 +68,5 @@
 
   </div>
 </section>
+
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor, NgClass } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { NgIconComponent } from '@ng-icons/core';
 
 interface Project {
@@ -13,37 +13,86 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, NgClass, NgIconComponent],
+  imports: [NgFor, NgIconComponent],
   templateUrl: './projects.html',
 })
 export class ProjectsComponent {
   projects: Project[] = [
     {
-      title: 'Eduvy – College Panel',
-      description: 'Built a full-stack college management system (Angular / Node.js / Express.js / MongoDB) covering student management, hostel management, timetable scheduling, inventory tracking, staff management, and EMI management. Designed RESTful APIs and built clean, reusable component code.',
-      techStack: ['Angular', 'Node.js', 'Express.js', 'MongoDB', 'TypeScript', 'REST APIs']
-    },
-    {
-      title: 'Eduvy – Super Admin Panel',
-      description: 'Built a centralized administration platform managing multiple colleges – institution oversight, user/role management, and system configuration. Designed backend API services, MongoDB schemas, reusable Angular UI components, and performance optimizations.',
-      techStack: ['Angular', 'Node.js', 'Express.js', 'MongoDB', 'TypeScript', 'REST APIs']
-    },
-    {
-      title: 'Eduvy – Web App',
-      description: 'Built a responsive Angular/TypeScript web application replicating the functionality and UI of an existing Flutter mobile app. Integrated REST APIs, managed application state, and ensured consistent experience across desktop and mobile browsers.',
-      techStack: ['Angular', 'TypeScript', 'REST APIs', 'RxJS', 'HTML5/CSS3']
+      title: 'Portfolio – Amal Johnson',
+      description: 'Designed and developed a modern, responsive developer portfolio to showcase my projects, technical skills, work experience, and contact information. Built with Angular, featuring smooth animations, reusable components, responsive layouts, and GitHub integration.',
+      techStack: [
+        'Angular',
+        'TypeScript',
+        'HTML5',
+        'CSS3',
+        'Bootstrap'
+      ],
+      githubLink: 'https://github.com/Amalzgit/Portfolio--Amal-Johnson'
     },
     {
       title: 'Samaya – E-Commerce Platform',
-      description: 'Built a full-stack e-commerce application supporting product browsing, cart management, and order/checkout flows. Implemented JWT authentication, product/order management RESTful APIs, and MongoDB integration.',
-      techStack: ['Node.js', 'Express.js', 'MongoDB', 'JavaScript', 'JWT Auth', 'HTML5/CSS3'],
+      description: 'Built a full-stack e-commerce platform with secure JWT authentication, product management, shopping cart, order processing, and payment workflow. Developed RESTful APIs and integrated MongoDB for scalable data management.',
+      techStack: [
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'JavaScript',
+        'JWT',
+        'REST APIs'
+      ],
       githubLink: 'https://github.com/Amalzgit/Samaya'
     },
     {
       title: 'Admin Dashboard',
-      description: 'Built a MERN stack admin panel for managing users, products, and application data through a centralized dashboard. Implemented secure JWT authentication, CRUD operations, REST API integration, and cross-browser responsive UI.',
-      techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST APIs'],
+      description: 'Developed a MERN stack admin dashboard featuring secure authentication, user management, product management, CRUD operations, and responsive UI. Designed REST APIs and implemented role-based access control.',
+      techStack: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'JWT',
+        'REST APIs'
+      ],
       githubLink: 'https://github.com/Amalzgit/Adminpanel'
+    },
+    {
+      title: 'MERN User Management System',
+      description: 'Created a complete user management system with authentication, authorization, profile management, and CRUD operations. Focused on scalable backend architecture and responsive frontend development.',
+      techStack: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'JWT',
+        'REST APIs'
+      ],
+      githubLink: 'https://github.com/Amalzgit/MERN--UMS'
+    },
+    {
+      title: 'Angular API Fetcher',
+      description: 'Built an Angular application demonstrating API integration, reusable services, RxJS observables, component communication, and efficient state management using TypeScript.',
+      techStack: [
+        'Angular',
+        'TypeScript',
+        'RxJS',
+        'REST APIs',
+        'HTML5',
+        'CSS3'
+      ],
+      githubLink: 'https://github.com/Amalzgit/Angular-api-fetcher'
+    },
+    {
+      title: 'Uber Clone',
+      description: 'Developed a responsive ride-booking application inspired by Uber, featuring modern UI components, routing, responsive layouts, and interactive user experience.',
+      techStack: [
+        'React.js',
+        'JavaScript',
+        'HTML5',
+        'CSS3',
+        'Bootstrap'
+      ],
+      githubLink: 'https://github.com/Amalzgit/Uber-clone'
     }
   ];
 }
