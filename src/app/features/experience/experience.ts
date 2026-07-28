@@ -19,16 +19,25 @@ interface Experience {
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
-      company: 'Eduvy Technology Pvt Ltd',
-      role: 'Software Developer (Frontend Focus)',
-      duration: 'Mar. 2025 – Present',
+      company: 'Eduvy Technologies Pvt Ltd',
+      role: 'Software Developer',
+      duration: 'March 2025 – Present',
       location: 'Bangalore',
       achievements: [
-        'Led front-end development and architecture strategies for modern, large-scale web panels (College Panel and Super Admin Panel).',
-        'Spearheaded a critical platform migration, building a high-performance alternative to the existing mobile app using Angular.',
-        'Architected and delivered production-ready modules, including a complex, multi-step dynamic Admission Form.',
-        'Designed and implemented a modular library of reusable UI components and shared data services.',
-        'Enforced application level safety by introducing enterprise JWT authentications and custom client-side Angular HTTP Interceptors.'
+        'Developed front-end applications using Angular and JavaScript (TypeScript) for a multi-module college ERP platform, covering hostel management, inventory, timetable, and EMI modules.',
+        'Built and integrated REST APIs using Node.js/Express.js, ensuring smooth data flow between frontend and backend across production modules used by multiple institutions.',
+        'Debugged and resolved application issues, monitored feature stability, and optimized performance for a growing production user base.',
+        'Collaborated with cross-functional teams under Agile/Scrum (Jira, sprint planning, stand-ups), using Git for version control and communicating progress clearly across the team.'
+      ]
+    },
+    {
+      company: 'Brototype',
+      role: 'Software Developer Trainee',
+      duration: 'Jan 2024 – Feb 2025',
+      location: 'Kochi',
+      achievements: [
+        'Completed an intensive full-stack development program covering JavaScript, TypeScript, Angular, and Node.js fundamentals.',
+        'Built front-end and full-stack applications end-to-end, strengthening programming fundamentals and problem-solving skills through project-based coursework.'
       ]
     }
   ];
