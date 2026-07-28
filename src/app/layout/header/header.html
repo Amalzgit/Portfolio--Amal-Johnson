@@ -1,48 +1,57 @@
 <header 
-  class="fixed w-full top-0 left-0 z-50 transition-all duration-300 border-b"
-  [ngClass]="isScrolled() ? 'bg-surface/90 backdrop-blur-md border-surfaceBorder shadow-lg py-3' : 'bg-transparent border-transparent py-5'">
+  class="fixed w-full top-0 left-0 z-50 transition-all duration-300 border-b-4 border-black"
+  [ngClass]="isScrolled() ? 'bg-[#130c21]/95 backdrop-blur-md py-3 shadow-brutal-lime' : 'bg-[#0b0612]/90 backdrop-blur-sm py-4'">
   
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center">
       
-      <!-- Logo -->
-      <a href="#" class="text-2xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
-        Amal<span class="text-primary">.</span>
+      <!-- Maximalist Logo -->
+      <a href="#" class="group flex items-center gap-2">
+        <div class="w-10 h-10 bg-[#a3e635] text-black font-syne font-extrabold text-xl flex items-center justify-center border-3 border-black shadow-brutal transition-transform group-hover:rotate-6">
+          AJ
+        </div>
+        <span class="text-xl sm:text-2xl font-syne font-extrabold tracking-tight text-white group-hover:text-[#a3e635] transition-colors">
+          AMAL<span class="text-[#f43f5e]">.</span>DEV
+        </span>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8 items-center">
-        <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
-        <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a>
-        <a href="#experience" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a>
-        <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
-        <a href="#contact" class="px-5 py-2.5 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-white transition-all duration-300 text-sm font-semibold">
-          Hire Me
+      <!-- Desktop Navigation Pills -->
+      <nav class="hidden md:flex space-x-3 lg:space-x-4 items-center">
+        <a href="#about" class="px-3.5 py-1.5 font-space text-xs uppercase tracking-wider font-bold text-slate-200 bg-[#1d1233] border-2 border-black rounded-lg hover:bg-[#a3e635] hover:text-black hover:-translate-y-0.5 shadow-[3px_3px_0px_#000] transition-all">About</a>
+        <a href="#skills" class="px-3.5 py-1.5 font-space text-xs uppercase tracking-wider font-bold text-slate-200 bg-[#1d1233] border-2 border-black rounded-lg hover:bg-[#06b6d4] hover:text-black hover:-translate-y-0.5 shadow-[3px_3px_0px_#000] transition-all">Skills</a>
+        <a href="#experience" class="px-3.5 py-1.5 font-space text-xs uppercase tracking-wider font-bold text-slate-200 bg-[#1d1233] border-2 border-black rounded-lg hover:bg-[#fbbf24] hover:text-black hover:-translate-y-0.5 shadow-[3px_3px_0px_#000] transition-all">Experience</a>
+        <a href="#projects" class="px-3.5 py-1.5 font-space text-xs uppercase tracking-wider font-bold text-slate-200 bg-[#1d1233] border-2 border-black rounded-lg hover:bg-[#f43f5e] hover:text-white hover:-translate-y-0.5 shadow-[3px_3px_0px_#000] transition-all">Projects</a>
+        <a href="#case-studies" class="px-3.5 py-1.5 font-space text-xs uppercase tracking-wider font-bold text-slate-200 bg-[#1d1233] border-2 border-black rounded-lg hover:bg-[#a855f7] hover:text-white hover:-translate-y-0.5 shadow-[3px_3px_0px_#000] transition-all">Cases</a>
+        
+        <a href="#contact" class="btn-maximalist-primary py-1.5 px-4 text-xs font-syne font-extrabold ml-2">
+          LET'S TALK ⚡
         </a>
       </nav>
 
       <!-- Mobile Menu Button -->
       <button 
-        class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" 
+        class="md:hidden p-2 bg-[#f43f5e] text-white border-2 border-black shadow-[3px_3px_0px_#000] active:translate-x-0.5 active:translate-y-0.5" 
         (click)="toggleMenu()"
         aria-label="Toggle menu">
-        <ng-icon [name]="isMenuOpen() ? 'lucideX' : 'lucideMenu'" size="24"></ng-icon>
+        <ng-icon [name]="isMenuOpen() ? 'lucideX' : 'lucideMenu'" size="22"></ng-icon>
       </button>
     </div>
   </div>
 
   <!-- Mobile Navigation Dropdown -->
   <div 
-    class="md:hidden absolute w-full bg-surface border-b border-surfaceBorder backdrop-blur-xl transition-all duration-300 overflow-hidden"
-    [ngClass]="isMenuOpen() ? 'max-h-[400px] opacity-100 py-4 shadow-xl' : 'max-h-0 opacity-0 py-0'">
-    <div class="flex flex-col space-y-4 px-6">
-      <a href="#about" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">About</a>
-      <a href="#skills" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">Skills</a>
-      <a href="#experience" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">Experience</a>
-      <a href="#projects" (click)="toggleMenu()" class="text-base font-medium text-slate-300 hover:text-white">Projects</a>
-      <a href="#contact" (click)="toggleMenu()" class="w-full text-center px-5 py-3 rounded-xl bg-primary text-white font-semibold mt-4 shadow-lg shadow-primary/20">
-        Hire Me
+    class="md:hidden absolute w-full bg-[#130c21] border-b-4 border-black transition-all duration-300 overflow-hidden"
+    [ngClass]="isMenuOpen() ? 'max-h-[450px] opacity-100 py-6 shadow-brutal-pink' : 'max-h-0 opacity-0 py-0'">
+    <div class="flex flex-col space-y-3 px-6 font-space">
+      <a href="#about" (click)="toggleMenu()" class="px-4 py-2 bg-[#1d1233] border-2 border-black font-bold text-white uppercase text-sm shadow-[3px_3px_0px_#000]">About</a>
+      <a href="#skills" (click)="toggleMenu()" class="px-4 py-2 bg-[#1d1233] border-2 border-black font-bold text-white uppercase text-sm shadow-[3px_3px_0px_#000]">Skills</a>
+      <a href="#experience" (click)="toggleMenu()" class="px-4 py-2 bg-[#1d1233] border-2 border-black font-bold text-white uppercase text-sm shadow-[3px_3px_0px_#000]">Experience</a>
+      <a href="#projects" (click)="toggleMenu()" class="px-4 py-2 bg-[#1d1233] border-2 border-black font-bold text-white uppercase text-sm shadow-[3px_3px_0px_#000]">Projects</a>
+      <a href="#case-studies" (click)="toggleMenu()" class="px-4 py-2 bg-[#1d1233] border-2 border-black font-bold text-white uppercase text-sm shadow-[3px_3px_0px_#000]">Case Studies</a>
+      <a href="#contact" (click)="toggleMenu()" class="btn-maximalist-primary w-full text-center mt-2 py-3">
+        LET'S TALK ⚡
       </a>
     </div>
   </div>
 </header>
+

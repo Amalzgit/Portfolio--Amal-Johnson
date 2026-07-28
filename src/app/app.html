@@ -1,22 +1,89 @@
-<div class="relative bg-background min-h-screen text-slate-200 font-sans selection:bg-primary selection:text-white">
-  <!-- Dynamic Particle/Animated Background (CSS Based for now) -->
-  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/10 blur-[120px]"></div>
+<div class="relative bg-[#0b0612] min-h-screen text-slate-100 font-sans selection:bg-[#a3e635] selection:text-black overflow-x-hidden">
+  
+  <!-- Dynamic Glowing Maximalist Background Orbs & Acid Grid Overlay -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-80">
+    <!-- Lime orb -->
+    <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#a3e635]/15 blur-[140px] animate-pulse-glow"></div>
+    <!-- Pink orb -->
+    <div class="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#f43f5e]/15 blur-[160px] animate-pulse-glow" style="animation-delay: 1.5s;"></div>
+    <!-- Cyan orb -->
+    <div class="absolute bottom-[-10%] left-[20%] w-[550px] h-[550px] rounded-full bg-[#06b6d4]/15 blur-[150px] animate-pulse-glow" style="animation-delay: 3s;"></div>
+    <!-- Purple accent orb -->
+    <div class="absolute top-[65%] right-[25%] w-[450px] h-[450px] rounded-full bg-[#a855f7]/15 blur-[130px] animate-pulse-glow" style="animation-delay: 4.5s;"></div>
+  </div>
+
+  <!-- Top Marquee Banner -->
+  <div class="relative z-50 bg-[#a3e635] text-black border-b-4 border-black py-2 font-space font-extrabold uppercase text-xs sm:text-sm tracking-wider overflow-hidden">
+    <div class="marquee-wrapper">
+      <div class="marquee-content animate-marquee">
+        <span class="flex items-center gap-6">
+          <span>⚡ FULL STACK ARCHITECT</span>
+          <span>✦</span>
+          <span>🔥 CREATIVE DEVELOPER</span>
+          <span>✦</span>
+          <span>🚀 OPEN FOR FREELANCE & FULL-TIME</span>
+          <span>✦</span>
+          <span>💡 HIGH PERFORMANCE WEB APPS</span>
+          <span>✦</span>
+          <span>✨ INNOVATIVE UI/UX DESIGNER</span>
+          <span>✦</span>
+        </span>
+        <span class="flex items-center gap-6">
+          <span>⚡ FULL STACK ARCHITECT</span>
+          <span>✦</span>
+          <span>🔥 CREATIVE DEVELOPER</span>
+          <span>✦</span>
+          <span>🚀 OPEN FOR FREELANCE & FULL-TIME</span>
+          <span>✦</span>
+          <span>💡 HIGH PERFORMANCE WEB APPS</span>
+          <span>✦</span>
+          <span>✨ INNOVATIVE UI/UX DESIGNER</span>
+          <span>✦</span>
+        </span>
+      </div>
+    </div>
   </div>
 
   <!-- Main Content Wrapper -->
   <div class="relative z-10 flex flex-col min-h-screen">
     
-    <!-- Floating Navigation Header -->
+    <!-- Floating Neo-Brutalist Navigation Header -->
     <app-header class="sticky top-0 z-50 transition-all duration-300"></app-header>
     
-    <!-- Router Outlet for potential multi-page or lazy-loaded routes -->
     <router-outlet></router-outlet>
     
     <!-- Portfolio Sections Stacked for Single Page Scroll -->
-    <main class="flex-grow flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 py-20">
+    <main class="flex-grow flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-36 py-12">
       <app-hero id="hero"></app-hero>
+      
+      <!-- Kinetic Section Divider Marquee -->
+      <div class="my-8 transform -rotate-1 bg-[#f43f5e] text-black border-4 border-black shadow-brutal py-3 font-space font-extrabold text-sm uppercase tracking-widest overflow-hidden">
+        <div class="marquee-wrapper">
+          <div class="marquee-content animate-marquee-reverse">
+            <span class="flex items-center gap-8">
+              <span>★ DRIVEN BY PASSION</span>
+              <span>✦</span>
+              <span>CRAFTING DIGITAL EXPERIENCES</span>
+              <span>✦</span>
+              <span>SCALABLE CODE ARCHITECTURE</span>
+              <span>✦</span>
+              <span>PIXEL PERFECT EXECUTION</span>
+              <span>✦</span>
+            </span>
+            <span class="flex items-center gap-8">
+              <span>★ DRIVEN BY PASSION</span>
+              <span>✦</span>
+              <span>CRAFTING DIGITAL EXPERIENCES</span>
+              <span>✦</span>
+              <span>SCALABLE CODE ARCHITECTURE</span>
+              <span>✦</span>
+              <span>PIXEL PERFECT EXECUTION</span>
+              <span>✦</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <app-about id="about"></app-about>
       <app-skills id="skills"></app-skills>
       <app-experience id="experience"></app-experience>
@@ -29,3 +96,4 @@
     <app-footer></app-footer>
   </div>
 </div>
+

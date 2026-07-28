@@ -1,28 +1,51 @@
-<section class="py-20 relative">
+<section class="py-12 relative">
   <div class="max-w-7xl mx-auto">
-    <div class="flex items-center space-x-4 mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Technical Arsenal</h2>
-      <div class="h-px bg-surfaceBorder flex-grow max-w-xs"></div>
+    
+    <!-- Section Header -->
+    <div class="flex items-center gap-4 mb-10">
+      <div class="bg-[#06b6d4] text-black font-space font-extrabold text-sm uppercase px-4 py-1.5 border-3 border-black shadow-[4px_4px_0px_#000] transform rotate-1">
+        02. TECHNICAL ARSENAL
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-syne font-extrabold text-white tracking-tight">
+        SKILLS & <span class="text-[#a3e635]">CAPABILITIES</span>
+      </h2>
+      <div class="h-1 bg-black flex-grow border-b-2 border-dashed border-[#06b6d4] hidden sm:block"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div *ngFor="let skill of skills" class="glass-card p-6 group">
-        <div class="flex justify-between items-center mb-4">
-          <h3 class="text-lg font-semibold text-white group-hover:text-primary transition-colors">{{ skill.name }}</h3>
-          <span class="text-xs font-mono px-2 py-1 bg-surfaceBorder/30 rounded text-slate-400">{{ skill.category }}</span>
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let skill of skills" 
+           class="bg-[#130c21] p-5 border-3 border-black shadow-brutal hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 group">
+        
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-base font-syne font-bold text-white group-hover:text-[#a3e635] transition-colors">
+            {{ skill.name }}
+          </h3>
+          
+          <span class="px-2.5 py-0.5 font-space font-extrabold text-[10px] uppercase border-2 border-black shadow-[2px_2px_0px_#000] text-black"
+                [style.backgroundColor]="skill.color">
+            {{ skill.category }}
+          </span>
         </div>
         
-        <!-- Animated Progress Bar -->
-        <div class="w-full bg-surfaceBorder/50 rounded-full h-2 overflow-hidden">
-          <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full transition-all duration-1000 ease-out"
-               [style.width]="skill.level + '%'">
+        <!-- Maximalist Progress Bar -->
+        <div class="w-full bg-[#1d1233] border-2 border-black p-1 shadow-[2px_2px_0px_#000] overflow-hidden">
+          <div class="h-3 border border-black transition-all duration-1000 ease-out"
+               [style.width]="skill.level + '%'"
+               [style.backgroundColor]="skill.color">
           </div>
         </div>
         
-        <div class="flex justify-end mt-2">
-          <span class="text-xs font-medium text-slate-500">{{ skill.level }}%</span>
+        <div class="flex justify-between items-center mt-2.5 font-space">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Proficiency</span>
+          <span class="text-xs font-extrabold px-1.5 py-0.5 bg-black border border-[#271942] text-white">
+            {{ skill.level }}%
+          </span>
         </div>
+
       </div>
     </div>
+
   </div>
 </section>
+

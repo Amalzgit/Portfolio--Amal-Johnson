@@ -3,8 +3,10 @@ import { NgFor } from '@angular/common';
 
 interface Skill {
   name: string;
-  level: number; // 0 to 100
-  category: 'Frontend' | 'Backend' | 'Tools';
+  level: number;
+  category: 'Frontend' | 'Backend' | 'Tools' | 'Database & Cloud';
+  color: string;
+  bgColor: string;
 }
 
 @Component({
@@ -15,17 +17,20 @@ interface Skill {
 })
 export class SkillsComponent {
   skills: Skill[] = [
-    { name: 'Angular (5+)', level: 95, category: 'Frontend' },
-    { name: 'TypeScript / JavaScript', level: 95, category: 'Frontend' },
-    { name: 'HTML5 / CSS3 / Bootstrap', level: 90, category: 'Frontend' },
-    { name: 'Responsive Web Design', level: 90, category: 'Frontend' },
-    { name: 'Node.js / Express.js', level: 85, category: 'Backend' },
-    { name: 'REST API Integration', level: 90, category: 'Backend' },
-    { name: 'JWT Authentication', level: 85, category: 'Backend' },
-    { name: 'CRUD Operations', level: 85, category: 'Backend' },
-    { name: 'Git & GitHub / GitLab', level: 90, category: 'Tools' },
-    { name: 'Postman / Hoppscotch', level: 90, category: 'Tools' },
-    { name: 'Agile/Scrum', level: 85, category: 'Tools' },
-    { name: 'Jira', level: 85, category: 'Tools' },
+    { name: 'Angular (5+ / 15-19)', level: 95, category: 'Frontend', color: '#a3e635', bgColor: '#130c21' },
+    { name: 'TypeScript / JavaScript (ES6+)', level: 95, category: 'Frontend', color: '#fbbf24', bgColor: '#130c21' },
+    { name: 'React.js', level: 90, category: 'Frontend', color: '#06b6d4', bgColor: '#130c21' },
+    { name: 'HTML5 / CSS3 / Tailwind / Bootstrap', level: 95, category: 'Frontend', color: '#f43f5e', bgColor: '#130c21' },
+    { name: 'Node.js / Express.js', level: 92, category: 'Backend', color: '#a3e635', bgColor: '#130c21' },
+    { name: 'RESTful API Design & Development', level: 95, category: 'Backend', color: '#06b6d4', bgColor: '#130c21' },
+    { name: 'JWT Authentication & Authorization', level: 90, category: 'Backend', color: '#a855f7', bgColor: '#130c21' },
+    { name: 'CRUD Operations & Business Logic', level: 92, category: 'Backend', color: '#fbbf24', bgColor: '#130c21' },
+    { name: 'MongoDB / Mongoose Schema Optimization', level: 88, category: 'Database & Cloud', color: '#10b981', bgColor: '#130c21' },
+    { name: 'PostgreSQL / SQL Databases', level: 85, category: 'Database & Cloud', color: '#3b82f6', bgColor: '#130c21' },
+    { name: 'CI/CD Pipelines & DevOps', level: 82, category: 'Database & Cloud', color: '#f97316', bgColor: '#130c21' },
+    { name: 'Git & GitHub / GitLab CI', level: 92, category: 'Tools', color: '#f43f5e', bgColor: '#130c21' },
+    { name: 'Postman / Hoppscotch API Testing', level: 90, category: 'Tools', color: '#fbbf24', bgColor: '#130c21' },
+    { name: 'Agile/Scrum & Jira Management', level: 88, category: 'Tools', color: '#06b6d4', bgColor: '#130c21' },
   ];
 }
+
